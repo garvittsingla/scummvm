@@ -181,4 +181,23 @@ void ScrollContainerWidget::setBackgroundType(ThemeEngine::WidgetBackground back
 	_backgroundType = backgroundType;
 }
 
+void ScrollContainerWidget::drawFull(){
+	int oldScrolledY = _scrolledY;
+	int oldLimitH = _limitH;
+
+	int fullHeight = _verticalScroll->_numEntries;
+
+	_scrolledY = 0;
+	_limitH = fullHeight;
+
+	reflowLayout();
+
+	Widget::draw();
+
+	_scrolledY = oldScrolledY;
+	_limitH = oldLimitH;
+
+	reflowLayout();
+}
+
 } // End of namespace GUI

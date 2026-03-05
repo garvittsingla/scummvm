@@ -63,6 +63,7 @@ public:
 
 	void draw() override;
 	void markAsDirty() override;
+	void drawFull();
 
 protected:
 	void drawWidget() override;

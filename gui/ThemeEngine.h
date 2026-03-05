@@ -403,6 +403,13 @@ public:
 	void drawToScreen();
 
 	/**
+	 * Sets the active drawing surface to the given surface.
+	 *
+	 * All drawing from this point on will be done on that surface.
+	 */
+	void drawToSurface(Graphics::ManagedSurface &_surface);
+
+	/**
 	 * The updateScreen() method is called every frame.
 	 * It copies dirty rectangles in the Screen surface to the overlay.
 	 */

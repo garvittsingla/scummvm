@@ -2192,6 +2192,10 @@ void ThemeEngine::drawToScreen() {
 	_vectorRenderer->setSurface(&_screen);
 }
 
+void ThemeEngine::drawToSurface(Graphics::ManagedSurface &_surface){
+    _vectorRenderer->setSurface(&_surface);
+}
+
 Common::Rect ThemeEngine::swapClipRect(const Common::Rect &newRect) {
 	Common::Rect oldRect = _clip;
 	_clip = newRect;
